@@ -25,7 +25,7 @@ class Person extends React.Component {
                         {props.count}/{props.details.length}</span></h1>
                     <div className="row mb-2">
                         {props.person.map(details => (
-                            <div className="col-md-4 mt-2" key={details.id}>
+                            <div className="col-md-6 col-lg-4 col-sm-6 mt-2" key={details.id}>
                                 <UserDetails  {...details} />
                             </div>
                         ))}

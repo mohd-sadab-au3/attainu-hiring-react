@@ -7,7 +7,7 @@ const UserDetails = ({ ...props }) => {
 
     return (
 
-        <div className="card" style={{ width: '18rem' }}>
+        <div className="card" style={{ maxWidth: '18rem' }}>
             <img src={props.url} className="card-img-top" alt="profile" />
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>

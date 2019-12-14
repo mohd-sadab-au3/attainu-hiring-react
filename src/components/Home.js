@@ -44,7 +44,7 @@ class Home extends React.Component {
                     <div className="row mb-2">
 
                         {this.props.details.map(details => (
-                            <div className="col-md-4 mt-2" key={details.id}>
+                            <div className="col-md-6 col-lg-4 col-sm-6 mt-2" key={details.id}>
                                 <UserDetails  {...details} />
                             </div>
                         ))}
