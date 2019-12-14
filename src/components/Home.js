@@ -40,7 +40,7 @@ class Home extends React.Component {
 
             result = (
                 <React.Fragment>
-                    <h1 className="text-center mt-5">Counter: <span className="text-danger">{this.props.details.length}/{this.props.details.length}</span></h1>
+                    <h1 className="text-center mt-5">Counter: <span className="text-danger">{this.props.count}/{this.props.details.length}</span></h1>
                     <div className="row mb-2">
 
                         {this.props.details.map(details => (
@@ -71,7 +71,8 @@ class Home extends React.Component {
 const mapStateToProps = (state) => ({
     details: state.details,
     loading: state.loading,
-    person: state.person
+    person: state.person,
+    count: state.count
 })
 
 const mapDispatchToProps = (dispatch) => ({

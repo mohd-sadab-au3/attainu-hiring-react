@@ -22,7 +22,7 @@ class Person extends React.Component {
             result = (
                 <div className="container">
                     <h1 className="text-center mt-5">Counter: <span className="text-danger">
-                        {props.person.length}/{props.details.length}</span></h1>
+                        {props.count}/{props.details.length}</span></h1>
                     <div className="row mb-2">
                         {props.person.map(details => (
                             <div className="col-md-4 mt-2" key={details.id}>
@@ -45,7 +45,8 @@ class Person extends React.Component {
 const mapStateToProps = (state) => ({
     details: state.details ? state.details : [],
     loading: state.loading,
-    person: state.person ? state.person : []
+    person: state.person ? state.person : [],
+    count: state.count
 })
 
 const mapDispatchToProps = (dispatch) => ({

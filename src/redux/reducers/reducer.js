@@ -4,7 +4,8 @@ const initialState = {
 
     details: [],
     person: [],
-    loading: true
+    loading: true,
+    count: 0
 }
 
 const reducer = (state = initialState, action) => {
@@ -26,6 +27,7 @@ const reducer = (state = initialState, action) => {
                     }
                     return elem;
                 }),
+                count: state.details.filter(elem => elem.converted).length,
                 loading: false
 
             }
